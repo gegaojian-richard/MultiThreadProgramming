@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fc9c3bc-b005-4258-af9c-4850def9369e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gegaojian/alarmsystem/ConnectingTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gegaojian/alarmsystem/HeartbeatTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gegaojian/Main.java" afterPath="$PROJECT_DIR$/src/com/gegaojian/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gegaojian/alarmsystem/AlarmAgent.java" afterPath="$PROJECT_DIR$/src/com/gegaojian/alarmsystem/AlarmAgent.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -308,12 +303,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515075382250</updated>
-      <workItem from="1515075384095" duration="4855000" />
+      <workItem from="1515075384095" duration="4888000" />
     </task>
+    <task id="LOCAL-00001" summary="AlarmSystem">
+      <created>1515080819341</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1515080819341</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4855000" />
+    <option name="totallyTimeSpent" value="4888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -352,6 +355,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="AlarmSystem" />
+    <option name="LAST_COMMIT_MESSAGE" value="AlarmSystem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,6 +8,15 @@ import com.gegaojian.guardedsuspension.*;
 
 public class AlarmAgent {
     private volatile boolean connectedToServer = false;
+    private static AlarmAgent alarmAgent = new AlarmAgent();
+
+    private AlarmAgent(){
+        init();
+    }
+
+    public static AlarmAgent getInstance(){
+        return alarmAgent;
+    }
 
     // 模式角色：Predicate
     private final Predicate agentConnected = new Predicate() {
@@ -44,7 +53,9 @@ public class AlarmAgent {
         // 模拟向报警服务器发送报警
         try{
             Thread.sleep(50);
-        }catch (Exception e){}
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     // stateChanged方法
@@ -72,41 +83,7 @@ public class AlarmAgent {
         connectedToServer = false;
     }
 
-    // 负责与报警服务器建立连接
-    private class ConnectingTask implements Runnable{
-        @Override
-        public void run() {
-            // 模拟连接
-            try{
-                Thread.sleep(100);
-            }catch (InterruptedException e){;}
-
-            onConnected();
-        }
-    }
-
-    private class HeartbeatTask extends TimerTask {
-        @Override
-        public void run() {
-            if (!testConnection()){
-                onDisconnected();
-                reconnect();
-            }
-        }
-
-        private boolean testConnection() {
-            return true;
-        }
-
-        private void reconnect(){
-            ConnectingTask connectingThread = new ConnectingTask();
-
-            // 直接在心跳定时器线程中执行
-            connectingThread.run();
-        }
-    }
-
-    public void init() {
+    private void init() {
         Thread connectingThread = new Thread(new ConnectingTask());
 
         connectingThread.start();

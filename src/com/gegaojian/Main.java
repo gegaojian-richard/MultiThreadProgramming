@@ -2,6 +2,8 @@ package com.gegaojian;
 
 import com.gegaojian.alarmsystem.AlarmAgent;
 import com.gegaojian.alarmsystem.AlarmInfo;
+import com.gegaojian.alarmsystem.AlarmManager;
+import com.gegaojian.alarmsystem.AlarmType;
 
 public class Main {
 
@@ -9,14 +11,14 @@ public class Main {
 	// write your code here
         System.out.println("Begin:");
 
-        for (int i = 0; i < 10000; ++i){
+        for (int i = 0; i < 100; ++i){
             try {
-                AlarmAgent.getInstance().sendAlarm(new AlarmInfo("AlarmINFO : " + i));
+                AlarmManager.getInstance().sendAlarm(AlarmType.FAULT, String.valueOf(i) , "fault");
             }catch (Exception e){
                 e.printStackTrace();
             }
         }
-        AlarmAgent.getInstance().disConnected();
+        AlarmManager.getInstance().shutdown();
         System.out.println("End!");
     }
 }
